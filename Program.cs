@@ -93,9 +93,10 @@ namespace StudentExercises
             Instructor Trevor = new Instructor()
             {
                 FirstName = "Trevor",
-                LastName = "Lahey",
-                SlackHandle = "@TrevorBag",
-                Cohort = 33
+                LastName = "Dennision",
+                SlackHandle = "@TBag",
+                Cohort = 33,
+                Specialty = "JavaScript"
 
             };
             Instructor Ricky = new Instructor
@@ -103,7 +104,8 @@ namespace StudentExercises
                 FirstName = "Ricky",
                 LastName = "Sunnyvale",
                 SlackHandle = "@RickySan",
-                Cohort = 31
+                Cohort = 31,
+                Specialty = "C#/.NET"
 
             };
             Instructor Julian = new Instructor()
@@ -111,7 +113,8 @@ namespace StudentExercises
                 FirstName = "Julian",
                 LastName = "Sunnyvale",
                 SlackHandle = "@JulianRules",
-                Cohort = 32
+                Cohort = 32,
+                Specialty = "SQL"
 
             };
 
