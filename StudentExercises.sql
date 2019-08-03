@@ -25,7 +25,6 @@ INSERT INTO Student(FirstName, LastName, SlackHandle, CohortID) VALUES('Barb', '
 INSERT INTO Student(FirstName, LastName, SlackHandle, CohortID) VALUES('Corey', 'Lahey', '@SupDude', 4);
 INSERT INTO Student(FirstName, LastName, SlackHandle, CohortID) VALUES('Philedelphia', 'Collins', '@TheDirtyBurger', 3);
 
-
 CREATE TABLE Instructor(
     ID INTEGER NOT NULL PRIMARY KEY IDENTITY,
     FirstName VARCHAR(20) NOT NULL,
@@ -55,8 +54,8 @@ INSERT INTO Exercise(ExerciseName, ProgramLanguage, InstructorID) VALUES ('Class
 
 CREATE TABLE StudentExercises(
     ID INTEGER NOT NULL PRIMARY KEY IDENTITY,
-    ExerciseID INT,
-    StudentId INT,
+    StudentId INTEGER NOT NULL,
+    ExerciseID INTEGER,
     CONSTRAINT FK_StudentExercises_Exercises FOREIGN KEY(ExerciseID) REFERENCES Exercise(ID),
     CONSTRAINT FK_StudentExercises_Students FOREIGN KEY(StudentID) REFERENCES Student(ID)
 );
@@ -76,5 +75,16 @@ LEFT JOIN Exercise e ON se.ExerciseId = e.ID
 LEFT JOIN Instructor ifn ON e.InstructorID = ifn.ID
 LEFT JOIN Instructor iln ON e.InstructorID = iln.ID
 
-SELECT * FROM StudentExercises;
---need to complete data for this join table
+SELECT * FROM StudentExercises ORDER BY StudentId asc;
+
+INSERT INTO StudentExercises(StudentId, ExerciseId) VALUES (1,1);
+INSERT INTO StudentExercises(StudentId, ExerciseId) VALUES (1,2);
+INSERT INTO StudentExercises(StudentId, ExerciseId) VALUES (2,3);
+INSERT INTO StudentExercises(StudentId, ExerciseId) VALUES (2,2);
+INSERT INTO StudentExercises(StudentId, ExerciseId) VALUES (3,2);
+INSERT INTO StudentExercises(StudentId, ExerciseId) VALUES (3,1);
+INSERT INTO StudentExercises(StudentId, ExerciseId) VALUES (4,1);
+INSERT INTO StudentExercises(StudentId, ExerciseId) VALUES (5,NULL);
+
+
+

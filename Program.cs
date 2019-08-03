@@ -26,8 +26,8 @@ namespace StudentExercises
             };
             Exercise Exercise4 = new Exercise()
             {
-                Name = "Types",
-                Language = "C#"
+                Name = "Basic Queries",
+                Language = "SQL"
             };
 
             Cohort Day32 = new Cohort()
@@ -86,9 +86,11 @@ namespace StudentExercises
 
             };
             Day32.AddStudent(Randy);
-            Day32.AddStudent(Lahey);
-            Day32.AddStudent(Barb);
-            Day32.AddStudent(Corey);
+            Day33.AddStudent(Lahey);
+            Day34.AddStudent(Barb);
+            Day34.AddStudent(Corey);
+            Day33.AddStudent(Phil);
+
 
             Instructor Trevor = new Instructor()
             {
